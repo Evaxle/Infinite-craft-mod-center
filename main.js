@@ -113,15 +113,6 @@ function addItem() {
     console.log('DONE');
 }
 
-function openWiki() {
-    const url = 'https://expitau.github.io/InfiniteCraftWiki/';
-    const searchTerm = prompt('Enter the search term:');
-    if (searchTerm) {
-        const wikiUrl = `${url}#${searchTerm}`;
-        window.open(wikiUrl, '_blank').focus();
-    }
-}
-
 const guiContainer = document.createElement('div');
 guiContainer.id = 'gui-container';
 guiContainer.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border: 1px solid black; z-index: 9999; cursor: move;';
@@ -148,10 +139,6 @@ exportDataBtn.addEventListener('click', exportData);
 guiContainer.appendChild(exportDataBtn);
 guiContainer.appendChild(document.createElement('br'));
 
-const wikiBtn = document.createElement('button');
-wikiBtn.textContent = 'Open Wiki';
-wikiBtn.addEventListener('click', openWiki);
-guiContainer.appendChild(wikiBtn);
 
 document.body.appendChild(guiContainer);
 
